@@ -44,7 +44,7 @@ function Particles() {
       geometry.setAttribute('position', new THREE.Float32BufferAttribute(vertices, 3));
       
       geometry.computeBoundingSphere();
-      const particles = new THREE.Points(geometry, new THREE.PointsMaterial({ color: 0xff44ff, size: 2 }));
+      const particles = new THREE.Points(geometry, new THREE.PointsMaterial({ color: 0xffffff, size: 2 }));
       particlesRef.current = particles;
 
       const renderingParent = new THREE.Group();

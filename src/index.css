@@ -8,10 +8,6 @@ body {
     box-sizing: border-box;
   }
 
-  canvas{
-    width: 100%;
-    height: 100%;
-  }
   :root {
     --step: 5%;
     --pattern: url("http://allyourhtml.club/carousel/pattern.webp") center / 75%;

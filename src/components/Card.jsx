@@ -44,7 +44,6 @@ const Card = () => {
             <img src="https://images.unsplash.com/photo-1533035353720-f1c6a75cd8ab?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fHdoaXRlJTIwcHVyZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60" alt="" />
           </div>
           <div class="card__layer1"></div>
-          <div class="card__layer2"></div>
         </div>
       </div>
     </div>

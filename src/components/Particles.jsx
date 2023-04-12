@@ -16,6 +16,7 @@ function Particles() {
     const init = () => {
       const container = containerRef.current;
       const scene = new THREE.Scene();
+      scene.background = new THREE.Color(0x1D1F46);
       const camera = new THREE.PerspectiveCamera(55, window.innerWidth / window.innerHeight, 0.1, 1000);
       const renderer = new THREE.WebGLRenderer({ antialias: true });
       renderer.setSize(window.innerWidth, window.innerHeight);

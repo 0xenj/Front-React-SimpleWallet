@@ -41,7 +41,7 @@ const Card = () => {
       <div class="card__wrapper">
         <div class="card__3d">
           <div class="card__image">
-            <img src="https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8d2hpdGUlMjBwdXJlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60" alt="" />
+            <img src="https://images.unsplash.com/photo-1533035353720-f1c6a75cd8ab?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fHdoaXRlJTIwcHVyZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60" alt="" />
           </div>
           <div class="card__layer1"></div>
           <div class="card__layer2"></div>

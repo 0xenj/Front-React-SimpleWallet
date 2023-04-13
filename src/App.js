@@ -2,7 +2,10 @@ import Particles from "./components/Particles.jsx";
 import Card from "./components/Card.jsx";
 import Header from "./components/Header.jsx";
 import Dashboard from "./components/Dashboard.jsx";
-import Text2 from "./components/Text2.jsx";
+import TypewriterLoop from "./components/TypewriterLoop.jsx";
+import DepositButton from "./components/DepositButton.jsx";
+import WithdrawButton from "./components/WithdrawButton.jsx";
+import StakingButton from "./components/StakingButton.jsx";
 import { WagmiConfig, createClient } from "wagmi";
 import {
   ConnectKitProvider,
@@ -31,14 +34,25 @@ function App() {
           <div className="absolute top-12 left-10">
             <Dashboard />
           </div>
-          <div className="absolute top-1/2 right-40">
-            <Text2 />
+          <div className="absolute bottom-20 right-20 font-size text-2xl text-white font-bold">
+            <TypewriterLoop />
           </div>
           <div className="absolute right-10 top-10">
             <ConnectKitButton />
           </div>
-          <div className="absolute translate-y-8">
+          <div className="absolute top-32">
             <Card />
+          </div>
+          <div className="absolute flex flex-row translate-y-24 space-x-4">
+            <div className="">
+              <DepositButton />
+            </div>
+            <div className="">
+              <WithdrawButton />
+            </div>
+            <div className="">
+              <StakingButton />
+            </div>
           </div>
         </ConnectKitProvider>
       </WagmiConfig>

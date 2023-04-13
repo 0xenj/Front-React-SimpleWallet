@@ -41,10 +41,10 @@ const Card = () => {
       <div class="card__wrapper">
         <div class="card__3d">
           <div class="card__image relative">
-            <img src="https://images.unsplash.com/photo-1533035353720-f1c6a75cd8ab?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fHdoaXRlJTIwcHVyZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60" alt="" />
-            <div className="absolute top-10 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-2xl">Current Balance SepoliaETH</div>
-            <div className="absolute h-0.5 w-full bg-white top-1/2 transform -translate-y-1/2"></div>
-            <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-2xl">Staking SepoliaETH</div>
+            <img src="https://img.freepik.com/free-photo/white-concrete-textures_74190-6994.jpg?size=626&ext=jpg&ga=GA1.1.1238656915.1681375468&semt=ais" alt="" />
+            <div className="absolute top-8 left-10 transform -translate-y-1/2 translate-x-10 text-black font-bold">Balance</div>
+            <div className="absolute h-0.5 w-full bg-white top-24 transform -translate-y-1/2"></div>
+            <div className="absolute top-28 bottom-24 left-12 transform -translate-y-1/2 text-black font-bold">Staking Balance</div>
           </div>
           <div class="card__layer1"></div>
         </div>

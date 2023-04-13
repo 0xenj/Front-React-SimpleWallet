@@ -42,9 +42,13 @@ const Card = () => {
         <div class="card__3d">
           <div class="card__image relative">
             <img src="https://img.freepik.com/free-photo/white-concrete-textures_74190-6994.jpg?size=626&ext=jpg&ga=GA1.1.1238656915.1681375468&semt=ais" alt="" />
-            <div className="absolute top-8 left-10 transform -translate-y-1/2 translate-x-10 text-black font-bold">Balance</div>
+              <h1 className='text-2xl absolute -translate-y-52 translate-x-24 text-black font-bold'>Balance</h1>
+              <span className='text-xl absolute -translate-y-40 translate-x-24 text-black font-bold'>000</span>
             <div className="absolute h-0.5 w-full bg-white top-24 transform -translate-y-1/2"></div>
-            <div className="absolute top-28 bottom-24 left-12 transform -translate-y-1/2 text-black font-bold">Staking Balance</div>
+            <div className="absolute top-28 bottom-24 left-12 transform -translate-y-1/2 text-black font-bold items-center justify-center">
+              <h1 className='flex-col'>Staking Balance</h1>
+              <span className='flex-col'>000000000</span>
+            </div>
           </div>
           <div class="card__layer1"></div>
         </div>

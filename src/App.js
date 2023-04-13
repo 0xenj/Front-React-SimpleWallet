@@ -43,7 +43,7 @@ function App() {
           <div className="absolute top-32">
             <Card />
           </div>
-          <div className="absolute flex flex-row translate-y-24 space-x-4">
+          <div className="absolute flex flex-row translate-y-32 space-x-4">
             <div className="">
               <DepositButton />
             </div>

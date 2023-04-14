@@ -1,4 +1,6 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
+import { ethers } from "ethers";
+import { useAccount } from 'wagmi'
 
 const Card = () => {
   const myAbi = require('../abi.json');
@@ -7,12 +9,29 @@ const Card = () => {
   const abi = myAbi;
   const providerEth = new ethers.providers.Web3Provider(window.ethereum);
   const signer = providerEth.getSigner();
+  const { address } = useAccount();
+  const [balance, setBalance] = useState(0);
+  const [balanceStaking, setBalanceStaking] = useState(0);
 
-  const handleDepositClick = async () => {
-
+  const getBalance = async () => {
     const SimpleWallet = new ethers.Contract(contractAddress, abi, signer);
-    await SimpleWallet.deposit({ value: ethers.utils.parseEther(amount) });
+    const balance = await SimpleWallet.getBalance();
+    setBalance(ethers.utils.formatEther(balance));
   };
+
+  const getStaking = async () => {
+    const SimpleWallet = new ethers.Contract(contractAddress, abi, signer);
+    const balanceStaking = await SimpleWallet.getStaking();
+    setBalanceStaking(ethers.utils.formatEther(balanceStaking));
+  };
+
+  useEffect(() => {
+    getBalance();
+  }, [address]);
+
+  useEffect(() => {
+    getStaking();
+  }, [address]);
 
   useEffect(() => {
     const el = document.querySelector('.card');
@@ -56,10 +75,10 @@ const Card = () => {
           <div className="card__image relative">
             <img src="https://img.freepik.com/free-photo/white-concrete-textures_74190-6994.jpg?size=626&ext=jpg&ga=GA1.1.1238656915.1681375468&semt=ais" alt="" />
             <h1 className='text-2xl justify-center absolute -translate-y-52 translate-x-16 text-black font-bold'>Balance</h1>
-            <span className='text-xl justify-center absolute -translate-y-40 left-1/2 transform -translate-x-1/2 text-black font-bold'>00</span>
+            <span className='text-xl justify-center absolute -translate-y-40 left-1/2 transform -translate-x-1/2 text-black font-bold'>{balance}</span>
             <div className="absolute h-0.5 w-full bg-white top-24 transform -translate-y-1/2"></div>
             <h1 className='text-xl justify-center absolute -translate-y-28 translate-x-10 text-black font-bold'>Staking Balance</h1>
-            <span className='text-xl justify-center absolute -translate-y-20 left-1/2 transform -translate-x-1/2 text-black font-bold'>00000000</span>
+            <span className='text-xl justify-center absolute -translate-y-20 left-1/2 transform -translate-x-1/2 text-black font-bold'>{balanceStaking}</span>
           </div>
           <div className="card__layer1"></div>
         </div>

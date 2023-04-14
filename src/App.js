@@ -6,6 +6,7 @@ import TypewriterLoop from "./components/TypewriterLoop.jsx";
 import DepositButton from "./components/DepositButton.jsx";
 import WithdrawButton from "./components/WithdrawButton.jsx";
 import StakingButton from "./components/StakingButton.jsx";
+import { mainnet, polygon, optimism, arbitrum, sepolia } from "wagmi/chains";
 import { WagmiConfig, createClient } from "wagmi";
 import {
   ConnectKitProvider,
@@ -15,10 +16,13 @@ import {
 
 const alchemyId = process.env.ALCHEMY_ID;
 
+const chains = [mainnet, polygon, optimism, arbitrum, sepolia];
+
 const client = createClient(
   getDefaultClient({
-    appName: "Your App Name",
+    appName: "SimpleWallet",
     alchemyId,
+    chains,
   })
 );
 

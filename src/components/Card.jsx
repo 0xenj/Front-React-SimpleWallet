@@ -1,6 +1,19 @@
 import React, { useEffect } from 'react';
 
 const Card = () => {
+  const myAbi = require('../abi.json');
+
+  const contractAddress = "0xf5c9ab149837599be6460ce01ee53148299c5ad7";
+  const abi = myAbi;
+  const providerEth = new ethers.providers.Web3Provider(window.ethereum);
+  const signer = providerEth.getSigner();
+
+  const handleDepositClick = async () => {
+
+    const SimpleWallet = new ethers.Contract(contractAddress, abi, signer);
+    await SimpleWallet.deposit({ value: ethers.utils.parseEther(amount) });
+  };
+
   useEffect(() => {
     const el = document.querySelector('.card');
     const wrap = document.querySelector('.card__wrapper');
